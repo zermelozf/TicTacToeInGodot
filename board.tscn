@@ -1,0 +1,12 @@
+[gd_scene load_steps=5 format=3 uid="uid://duo1ggfrilfrn"]
+
+[ext_resource type="Texture2D" uid="uid://b7lpjgn2wqppj" path="res://assets/board.png" id="1_buhf4"]
+[ext_resource type="Script" path="res://board.gd" id="2_w6w6c"]
+[ext_resource type="PackedScene" uid="uid://dr31ln1bthdo1" path="res://patrick.tscn" id="3_5bevw"]
+[ext_resource type="PackedScene" uid="uid://dkiwvomtrdrgl" path="res://arnaud.tscn" id="4_c5k6e"]
+
+[node name="board" type="Sprite2D"]
+texture = ExtResource("1_buhf4")
+script = ExtResource("2_w6w6c")
+pat = ExtResource("3_5bevw")
+aru = ExtResource("4_c5k6e")

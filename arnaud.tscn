@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkiwvomtrdrgl"]
+
+[ext_resource type="Texture2D" uid="uid://boep6el33rm8g" path="res://assets/aru.png" id="1_dlcbo"]
+
+[node name="arnaud" type="Node2D" groups=["moves"]]
+
+[node name="aru" type="Sprite2D" parent="."]
+texture = ExtResource("1_dlcbo")

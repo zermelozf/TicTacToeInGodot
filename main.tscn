@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3r2lrwd33if8"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_5fex4"]
+[ext_resource type="PackedScene" uid="uid://duo1ggfrilfrn" path="res://board.tscn" id="1_ma4hr"]
+
+[node name="main" type="Node2D"]
+position = Vector2(0, 8)
+script = ExtResource("1_5fex4")
+
+[node name="board" parent="." instance=ExtResource("1_ma4hr")]
+position = Vector2(292, 387)
+scale = Vector2(0.5, 0.5)
+
+[node name="RestartButton" type="Button" parent="."]
+process_mode = 2
+offset_left = 271.0
+offset_top = 769.0
+offset_right = 336.0
+offset_bottom = 800.0
+text = "Restart"
+
+[node name="RestartLabel" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 735.0
+offset_right = 358.0
+offset_bottom = 761.0
+text = "Player 1 wins"
+
+[connection signal="game_finished" from="board" to="." method="_on_board_game_finished"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_button_pressed"]
